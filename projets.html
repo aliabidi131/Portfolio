@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qui suis-je</title>
+</head>
+<body>
+    <header>
+        <h2>Mes projets</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="apropos.html">À propos de moi</a></li>
+                <li><a href="projets.html">Mes projets</a></li>
+                <li><a href="cv.html">Mon CV</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section>
+            <h3><i>Liste de projets</i></h3>
+            <table aria-label="tableau des projets">
+                <caption>Liste des projets réalisés</caption>
+                <thead>
+                    <tr>
+                        <th>Nom du projet</th>
+                        <th>Description</th>
+                        <th>Lien vers le projet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Portfolio</td>
+                        <td>Lorem ipsum dolor sit amet.</td>
+                        <td><a href="https://Google.com" target="_blank">Lien vers le projet</a></td>
+                    </tr>
+                    <tr>
+                        <td>Site Web</td>
+                        <td colspan="2">Consectetur adipisicing elit. Quod, delectus.</td>
+                    </tr>
+                    <tr>
+                        <td>Calculatrice Sientifique</td>
+                        <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, libero.</td>
+                        <td rowspan="2">
+                            <a href="image1.png">
+                                <img  aria-label="voir l'image du projet Calculatrice" src="image1.png" width="100" height="70" alt="Image du projet">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jeux Puzzle</td>
+                        <td>Lorem ipsum dolor sit amet.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit vero pariatur tempore sequi eius laboriosam nulla, odit voluptate?
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <br>
+        <h4>Vidéo explicative</h4>
+        <aside>
+            <video aria-label="video explicatif sur HTML" title="video of HTML cours" controls muted poster="image3.webp" width="400">
+                <source src="video.mp4" type="video/mp4">
+                <source src="video.ogg" type="video/ogg">
+                <source src="video.webm" type="video/webm">
+                <track default src="ar.vtt" kind="subtitles" lang="ar" label="arabic">
+                <track src="en.vtt" kind="subtitles" lang="en" label="english">
+                <track src="fr.vtt" kind="subtitles" lang="fr" label="french">
+                Your browser does not support the video element.
+            </video>
+        </aside>
+        <br>
+        <aside>
+            <h4>Audio explicatif</h4>
+            <p>Audio de présentation du projet</p>
+            <audio aria-label="audio explicatif" title="audio" controls muted loop>
+                <source src="audio.mp3" type="audio/mp3">
+                <source src="audio.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2025 Ali Laabidi.</p>
+    </footer>
+</body>
+</html>
