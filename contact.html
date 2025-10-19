@@ -1,93 +1,141 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contactez-moi - Ali Laabidi</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h2>Contactez-moi</h2>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="apropos.html">À propos de moi</a></li>
-                <li><a href="projets.html">Mes projets</a></li>
-                <li><a href="cv.html">Mon CV</a></li>
-                <li><a href="contact.html" aria-current="page">Contact</a></li>
-            </ul>
-        </nav>
+      <h2>Contactez-moi</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="apropos.html">À propos de moi</a></li>
+          <li><a href="projets.html">Mes projets</a></li>
+          <li><a href="cv.html">Mon CV</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <hr />
     <main>
-        <form action="#" method="post" enctype="multipart/form-data" novalidate>
-            <div class="champ">
-                <label for="nom">Nom complet :</label>
-                <input type="text" id="nom" name="nom" placeholder="Ali Abidi" required >
-            </div>
+      <form action="#" method="post" enctype="multipart/form-data" novalidate>
+        <div class="champ">
+          <label for="nom">Nom complet :</label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            placeholder="Ali Abidi"
+            required
+          />
+        </div>
 
-            <div class="champ">
-                <label for="email">Adresse email :</label>
-                <input type="email" id="email" name="email" placeholder="aliabidi131@email.com" required >
-            </div>
+        <div class="champ">
+          <label for="email">Adresse email :</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="aliabidi131@email.com"
+            required
+          />
+        </div>
 
-            <div class="champ">
-                <label for="sujet">Sujet de votre message :</label>
-                <input type="text" id="sujet" name="sujet" placeholder="Demande d'information" required >
-            </div>
+        <div class="champ">
+          <label for="sujet">Sujet de votre message :</label>
+          <input
+            type="text"
+            id="sujet"
+            name="sujet"
+            placeholder="Demande d'information"
+            required
+          />
+        </div>
 
-            <div class="champ">
-                <label for="message">Votre message :</label>
-                <textarea id="message" name="message" rows="6" placeholder="Écrivez votre message ici..." required ></textarea>
-            </div>
-            
-            <div class="champ">
-                <label>
-                    <input type="checkbox" name="newsletter" value="oui" />
-                    Je souhaite recevoir la newsletter et les offres exclusives
-                </label>
-            </div>
+        <div class="champ">
+          <label for="message">Votre message :</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Écrivez votre message ici..."
+            required
+          ></textarea>
+        </div>
 
-            <fieldset class="champ">
-                <legend>Comment avez-vous entendu parler de nous ?</legend>
-                <label><input type="radio" name="source" value="amis" required> Par des amis</label><br>
-                <label><input type="radio" name="source" value="internet"> Internet</label><br>
-                <label><input type="radio" name="source" value="réseaux sociaux"> Réseaux sociaux</label><br>
-                <label><input type="radio" name="source" value="autre"> Autre</label>
-            </fieldset>
+        <div class="champ">
+          <label>
+            <input type="checkbox" name="newsletter" value="oui" />
+            Je souhaite recevoir la newsletter et les offres exclusives
+          </label>
+        </div>
 
-            <div class="champ">
-                <label for="fichier">Joindre un fichier (facultatif) :</label>
-                <input type="file" id="fichier" name="fichier" accept=".jpg,.jpeg,.png,.pdf" >
-            </div>
+        <fieldset class="champ">
+          <legend>Comment avez-vous entendu parler de nous ?</legend>
+          <label
+            ><input type="radio" name="source" value="amis" required /> Par des
+            amis</label
+          ><br />
+          <label
+            ><input type="radio" name="source" value="internet" />
+            Internet</label
+          ><br />
+          <label
+            ><input type="radio" name="source" value="réseaux sociaux" />
+            Réseaux sociaux</label
+          ><br />
+          <label
+            ><input type="radio" name="source" value="autre" /> Autre</label
+          >
+        </fieldset>
 
-            <div class="champ">
-                <label for="satisfaction">Votre niveau de satisfaction :</label>
-                <input type="range" id="satisfaction" name="satisfaction" min="0" max="10" step="1" value="5" >
-                <span id="valeurSatisfaction">5</span>/10
-            </div>
+        <div class="champ">
+          <label for="fichier">Joindre un fichier (facultatif) :</label>
+          <input
+            type="file"
+            id="fichier"
+            name="fichier"
+            accept=".jpg,.jpeg,.png,.pdf"
+          />
+        </div>
 
-            <div class="champ">
-                <label for="pays">Votre pays :</label>
-                <select id="pays" name="pays" required>
-                    <option value="">-- Sélectionnez votre pays --</option>
-                    <option value="tunisie">Tunisie</option>
-                    <option value="france">France</option>
-                    <option value="maroc">Maroc</option>
-                    <option value="canada">Canada</option>
-                    <option value="autre">Autre</option>
-                </select>
-            </div>
+        <div class="champ">
+          <label for="satisfaction">Votre niveau de satisfaction :</label>
+          <input
+            type="range"
+            id="satisfaction"
+            name="satisfaction"
+            min="0"
+            max="10"
+            step="1"
+            value="5"
+          />
+          <span id="valeurSatisfaction">5</span>/10
+        </div>
 
-            <div class="champ">
-                <input type="submit" value="Envoyer">
-                <input type="reset" value="Réinitialiser">
-            </div>
-        </form>
+        <div class="champ">
+          <label for="pays">Votre pays </label>
+          <select id="pays" name="pays" required>
+            <option value="">-- Sélectionnez votre pays --</option>
+            <option value="tunisie">Tunisie</option>
+            <option value="france">France</option>
+            <option value="maroc">Maroc</option>
+            <option value="canada">Canada</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+
+        <div class="champ">
+          <input type="submit" value="Envoyer" />
+          <input type="reset" value="Réinitialiser" />
+        </div>
+      </form>
     </main>
     <footer>
-        <p>&copy; 2025 Ali Laabidi.</p>
+      <p>&copy; 2025 Ali Laabidi.</p>
     </footer>
-
-</body>
+  </body>
 </html>
