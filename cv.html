@@ -1,72 +1,180 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon CV - Ali Laabidi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <header>
-        <h2>Mon CV</h2>
-        <nav>
-            <ul>
-                <li><a href="index.html" >Accueil</a></li>
-                <li><a href="apropos.html" >À propos de moi</a></li>
-                <li><a href="projets.html" >Mes projets</a></li>
-                <li><a href="cv.html" >Mon CV</a></li>
-                <li><a href="contact.html" >Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <hr>
-    <main>
-        <h2>Curriculum Vitae</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Année</th>
-                    <th>Expérience ou Formation</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2024</td>
-                    <td>Stage en développement web chez TechDev</td>
-                </tr>
-                <tr>
-                    <td>2023</td>
-                    <td>Licence en Informatique – Université de Gabès</td>
-                </tr>
-                <tr>
-                    <td>2022</td>
-                    <td>Formation en JavaScript & React</td>
-                </tr>
-                <tr>
-                    <td>2021</td>
-                    <td>Participation au Hackathon National</td>
-                </tr>
-                <tr>
-                    <td>2020</td>
-                    <td>Baccalauréat Scientifique</td>
-                </tr>
-                <tr>
-                    <td>2019</td>
-                    <td>Initiation à la programmation Python</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Compétences</h3>
-        <ul>
-            <li>HTML / CSS / JavaScript</li>
-            <li>Développement Web (React, Node.js)</li>
-            <li>Programmation en Python et Java</li>
-            <li>Utilisation de Git et GitHub</li>
-            <li>Travail en équipe et gestion de projet</li>
+  </head>
+  <body class="container">
+    <header class="text-center bg-dark text-white p-4 rounded mb-4">
+      <h2 class="h3 ctk">Mon CV</h2>
+      <nav>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link text-white">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a href="apropos.html" class="nav-link text-white">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a href="projets.html" class="nav-link text-white">Projets</a>
+          </li>
+          <li class="nav-item">
+            <a href="cv.html" class="nav-link text-white active">CV</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link text-white">Contact</a>
+          </li>
         </ul>
+      </nav>
+    </header>
+
+    <main class="mb-4">
+      <div class="row">
+        <!-- Colonne Expériences/Formations -->
+        <div class="col-lg-8 mb-4">
+          <div class="card p-4 mb-4">
+            <h2 class="h4 mb-4 text-primary">Curriculum Vitae</h2>
+            <div class="table-responsive">
+              <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                  <tr>
+                    <th scope="col">Année</th>
+                    <th scope="col">Expérience ou Formation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw-bold text-nowrap">2024</td>
+                    <td>Stage en développement web chez TechDev</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold text-nowrap">2023</td>
+                    <td>Licence en Informatique – Université de Gabès</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold text-nowrap">2022</td>
+                    <td>Formation en JavaScript & React</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold text-nowrap">2021</td>
+                    <td>Participation au Hackathon National</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold text-nowrap">2020</td>
+                    <td>Baccalauréat Scientifique</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold text-nowrap">2019</td>
+                    <td>Initiation à la programmation Python</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Colonne Compétences -->
+        <div class="col-lg-4 mb-4">
+          <div class="card p-4 h-100">
+            <h3 class="h5 mb-4 text-primary">Compétences</h3>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <span class="badge bg-primary me-2">HTML/CSS/JS</span>
+                Développement frontend
+              </li>
+              <li class="mb-3">
+                <span class="badge bg-success me-2">React/Node.js</span>
+                Développement fullstack
+              </li>
+              <li class="mb-3">
+                <span class="badge bg-info me-2">Python/Java</span>
+                Programmation orientée objet
+              </li>
+              <li class="mb-3">
+                <span class="badge bg-warning me-2">Git/GitHub</span>
+                Gestion de versions
+              </li>
+              <li class="mb-3">
+                <span class="badge bg-secondary me-2">Agile</span>
+                Travail en équipe et gestion de projet
+              </li>
+            </ul>
+
+            <!-- Section Langues -->
+            <div class="mt-4">
+              <h4 class="h6 text-primary mb-3">Langues</h4>
+              <div class="mb-2">
+                <small>Arabe</small>
+                <div class="progress" style="height: 8px">
+                  <div
+                    class="progress-bar bg-success"
+                    style="width: 100%"
+                  ></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <small>Français</small>
+                <div class="progress" style="height: 8px">
+                  <div class="progress-bar bg-info" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <small>Anglais</small>
+                <div class="progress" style="height: 8px">
+                  <div class="progress-bar bg-warning" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Informations supplémentaires -->
+      <div class="row">
+        <div class="col-12">
+          <div class="card p-4">
+            <div class="row">
+              <div class="col-md-6">
+                <h4 class="h6 text-primary mb-3">Centres d'intérêt</h4>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge bg-light text-dark border"
+                    >Technologies émergentes</span
+                  >
+                  <span class="badge bg-light text-dark border"
+                    >Open Source</span
+                  >
+                  <span class="badge bg-light text-dark border"
+                    >UI/UX Design</span
+                  >
+                  <span class="badge bg-light text-dark border"
+                    >Veille technologique</span
+                  >
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h4 class="h6 text-primary mb-3">Certifications</h4>
+                <ul class="list-unstyled small">
+                  <li class="mb-1">🎓 Développement Web Fullstack</li>
+                  <li class="mb-1">📱 React Native Mobile</li>
+                  <li class="mb-1">☁️ AWS Cloud Practitioner</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer>
-        <p><b>&copy; 2025 Ali Laabidi.</b></p>
+
+    <footer class="text-center bg-dark text-white p-3 rounded">
+      <p class="mb-0"><strong>&copy; 2025 Ali Laabidi.</strong></p>
     </footer>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

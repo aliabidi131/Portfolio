@@ -8,150 +8,93 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: white;
   min-height: 100vh;
 }
 
-/* Container principal */
-body {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  min-height: 100vh;
-}
+/* Styles personnalisés pour compléter Bootstrap */
 
-/* En-tête */
-header {
-  background: linear-gradient(135deg, #2c3e50, #34495e);
-  color: white;
-  padding: 2rem 0;
-  text-align: center;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 300;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Navigation */
-nav {
-  margin-top: 1rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-nav li {
-  margin: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 2px solid transparent;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-nav a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: #3498db;
-  transform: translateY(-2px);
-}
-
-/* Ligne de séparation */
-hr {
-  border: none;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #3498db, transparent);
-  margin: 2rem 0;
-}
-
-/* Section principale */
-main {
-  padding: 2rem 0;
-}
-
-section {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-}
-
-section h2 {
-  color: #2c3e50;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 3px solid #3498db;
-  padding-bottom: 0.5rem;
-  display: inline-block;
-}
-
-/* Figure et image */
-figure {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-figure img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+/* Image personnalisée */
+figure img.rounded {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
-figure img:hover {
+figure img.rounded:hover {
   transform: scale(1.02);
 }
 
-figcaption {
-  margin-top: 0.5rem;
-  font-style: italic;
-  color: #7f8c8d;
-  font-size: 0.9rem;
+/* Bordures personnalisées pour les titres */
+.h3 {
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  color: #2c3e50;
+}
+.ctk {
+  color: white !important;
 }
 
-/* Paragraphes */
-p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: #555;
-  line-height: 1.8;
+/* Effets de survol pour la navigation */
+.nav-link {
+  transition: all 0.3s ease;
+  border-radius: 25px;
+  margin: 0 5px;
 }
 
-/* Pied de page */
-footer {
-  background: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
-  border-radius: 10px;
-  margin-top: 2rem;
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-2px);
 }
 
-footer p {
-  margin: 0;
-  color: white;
+/* Ombre personnalisée pour les cartes */
+.card {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: transform 0.3s ease;
 }
 
-/* Animations */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Styles pour les formulaires */
+.champ {
+  margin-bottom: 1.5rem;
+}
+
+.champ label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+/* Focus personnalisé */
+.form-control:focus,
+.form-select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* Styles pour les boutons personnalisés */
+.btn-custom {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation pour les sections */
+.card {
+  animation: fadeIn 0.8s ease-out;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -163,212 +106,42 @@ footer p {
   }
 }
 
-section {
-  animation: fadeIn 0.8s ease-out;
+/* Styles pour les légendes */
+figcaption {
+  color: #6c757d;
+  font-style: italic;
+  margin-top: 0.5rem;
 }
 
-/* Responsive Design */
+/* Responsive supplémentaire */
 @media (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
-
-  header h1 {
+  .display-4 {
     font-size: 2rem;
   }
 
-  nav ul {
+  .nav {
     flex-direction: column;
     gap: 0.5rem;
   }
 
-  nav a {
+  .nav-link {
     display: block;
-    padding: 0.8rem;
+    text-align: center;
+    margin: 0.2rem 0;
   }
 
-  section {
-    padding: 1.5rem;
-  }
-
-  section h2 {
-    font-size: 1.5rem;
+  .card {
+    padding: 1.5rem !important;
   }
 }
 
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  section {
-    padding: 1rem;
-  }
-
-  figure img {
-    width: 100%;
-  }
+/* Personnalisation des couleurs */
+.bg-dark {
+  background: linear-gradient(135deg, #2c3e50, #34495e) !important;
 }
 
-/* États interactifs */
-nav a:focus {
-  outline: 2px solid #3498db;
-  outline-offset: 2px;
-}
-
-/* Amélioration de l'accessibilité */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* Styles pour la sélection de texte */
+/* Sélection de texte */
 ::selection {
   background: #3498db;
   color: white;
-}
-
-.champ {
-  display: flex;
-  gap: 15px;
-  margin-top: 25px;
-  justify-content: center;
-  align-items: center;
-}
-
-.champ input[type="submit"],
-.champ input[type="reset"] {
-  padding: 12px 30px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.champ input[type="submit"] {
-  background: linear-gradient(135deg, #3498db, #2980b9);
-  color: white;
-  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-}
-
-.champ input[type="submit"]:hover {
-  background: linear-gradient(135deg, #2980b9, #21618c);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
-}
-
-.champ input[type="reset"] {
-  background: linear-gradient(135deg, #95a5a6, #7f8c8d);
-  color: white;
-  box-shadow: 0 4px 15px rgba(149, 165, 166, 0.3);
-}
-
-.champ input[type="reset"]:hover {
-  background: linear-gradient(135deg, #7f8c8d, #6c7b7d);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(149, 165, 166, 0.4);
-}
-
-/* Style court pour le formulaire */
-.champ {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 00;
-  color: #2c3e50;
-}
-
-input[type="text"],
-input[type="email"],
-textarea,
-select {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid #bdc3c7;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
-}
-
-textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-/* Checkbox et Radio */
-input[type="checkbox"],
-input[type="radio"] {
-  margin-right: 8px;
-}
-
-fieldset {
-  border: 2px solid #ecf0f1;
-  border-radius: 8px;
-  padding: 15px;
-}
-
-legend {
-  font-weight: 600;
-  color: #2c3e50;
-  padding: 0 10px;
-}
-
-/* Boutons */
-input[type="submit"],
-input[type="reset"] {
-  padding: 12px 30px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-right: 10px;
-}
-
-input[type="submit"] {
-  background: #3498db;
-  color: white;
-}
-
-input[type="reset"] {
-  background: #95a5a6;
-  color: white;
-}
-
-input[type="submit"]:hover {
-  background: #2980b9;
-}
-
-input[type="reset"]:hover {
-  background: #7f8c8d;
-}
-
-input[type="range"] {
-  width: 200px;
-  margin: 0 10px;
-}
-
-input[type="file"] {
-  padding: 8px;
-  border: 2px dashed #bdc3c7;
-  border-radius: 6px;
-  background: #f8f9fa;
 }
