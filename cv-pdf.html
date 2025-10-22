@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Ali Laabidi - PDF</title>
+    <!-- Librairie pour générer le PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        /* Styles pour le PDF */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .contact-info {
+            color: #7f8c8d;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section h2 {
+            color: #3498db;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .date {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-badge {
+            background: #ecf0f1;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+        
+        .languages {
+            margin-top: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cv-content">
+        <!-- En-tête du CV -->
+        <div class="header">
+            <h1>ALI LAABIDI</h1>
+            <div class="contact-info">
+                <p>📧 aliabidi131@email.com | 📱 +216 XX XXX XXX | 🌐 Tunisie</p>
+            </div>
+        </div>
+
+        <!-- Expérience Professionnelle -->
+        <div class="section">
+            <h2>EXPÉRIENCE PROFESSIONNELLE</h2>
+            <div class="experience-item">
+                <div class="date">2024</div>
+                <div><strong>Stage en développement web</strong> - TechDev</div>
+                <div>Développement d'applications web, maintenance de sites</div>
+            </div>
+            <div class="experience-item">
+                <div class="date">2021</div>
+                <div><strong>Participation au Hackathon National</strong></div>
+                <div>Développement d'une application en 48h en équipe</div>
+            </div>
+        </div>
+
+        <!-- Formation -->
+        <div class="section">
+            <h2>FORMATION</h2>
+            <div class="education-item">
+                <div class="date">2023</div>
+                <div><strong>Licence en Informatique</strong> - Université de Gabès</div>
+            </div>
+            <div class="education-item">
+                <div class="date">2022</div>
+                <div><strong>Formation JavaScript & React</strong></div>
+            </div>
+            <div class="education-item">
+                <div class="date">2020</div>
+                <div><strong>Baccalauréat Scientifique</strong></div>
+            </div>
+        </div>
+
+        <!-- Compétences -->
+        <div class="section">
+            <h2>COMPÉTENCES TECHNIQUES</h2>
+            <div class="skills">
+                <span class="skill-badge">HTML/CSS</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">React</span>
+                <span class="skill-badge">Node.js</span>
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">Java</span>
+                <span class="skill-badge">Git/GitHub</span>
+                <span class="skill-badge">MySQL</span>
+            </div>
+        </div>
+
+        <!-- Langues -->
+        <div class="section">
+            <h2>LANGUES</h2>
+            <div class="languages">
+                <div><strong>Arabe:</strong> Langue maternelle</div>
+                <div><strong>Français:</strong> Courant</div>
+                <div><strong>Anglais:</strong> Intermédiaire</div>
+            </div>
+        </div>
+
+        <!-- Centres d'intérêt -->
+        <div class="section">
+            <h2>CENTRES D'INTÉRÊT</h2>
+            <div>Technologies émergentes, Open Source, UI/UX Design, Veille technologique</div>
+        </div>
+
+        <!-- Pied de page -->
+        <div class="footer">
+            <p>CV généré le <span id="current-date"></span> | © 2025 Ali Laabidi</p>
+        </div>
+    </div>
+
+    <!-- Bouton de téléchargement -->
+    <div style="text-align: center; margin-top: 30px;">
+        <button onclick="generatePDF()" style="
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        ">
+            📄 Télécharger le PDF
+        </button>
+    </div>
+
+    <script>
+        // Date actuelle
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('fr-FR');
+        
+        // Fonction pour générer le PDF
+        function generatePDF() {
+            const element = document.getElementById('cv-content');
+            
+            const options = {
+                margin: 10,
+                filename: 'CV_Ali_Laabidi.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            
+            html2pdf().set(options).from(element).save();
+        }
+        
+        // Générer automatiquement le PDF après 1 seconde
+        // setTimeout(generatePDF, 1000);
+    </script>
+</body>
+</html>

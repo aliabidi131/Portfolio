@@ -145,3 +145,100 @@ figcaption {
   background: #3498db;
   color: white;
 }
+
+/* Styles pour l'impression PDF */
+@media print {
+  /* Masquer les éléments non nécessaires */
+  header,
+  footer,
+  .nav,
+  #downloadPdf,
+  .btn {
+    display: none !important;
+  }
+
+  /* Reset du layout */
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    font-size: 12pt !important;
+    line-height: 1.4 !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Styles des cartes pour l'impression */
+  .card {
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    margin-bottom: 15px !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Couleurs d'impression */
+  .text-primary {
+    color: #000 !important;
+  }
+
+  .bg-primary,
+  .bg-success,
+  .bg-info,
+  .bg-warning,
+  .bg-secondary {
+    background-color: #f8f9fa !important;
+    color: #000 !important;
+    border: 1px solid #ddd !important;
+  }
+
+  /* Tableaux */
+  .table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  .table-striped tbody tr:nth-child(odd) {
+    background-color: #f8f9fa !important;
+  }
+
+  .table-dark {
+    background-color: #333 !important;
+    color: white !important;
+  }
+
+  /* Badges */
+  .badge {
+    border: 1px solid #000 !important;
+    background: #f8f9fa !important;
+    color: #000 !important;
+  }
+
+  /* Progress bars */
+  .progress {
+    border: 1px solid #ddd !important;
+  }
+
+  .progress-bar {
+    background: #333 !important;
+  }
+
+  /* Éviter les coupures */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid !important;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid !important;
+  }
+}
